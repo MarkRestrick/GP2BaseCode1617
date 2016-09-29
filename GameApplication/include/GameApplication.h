@@ -17,11 +17,19 @@ public:
 	//This is where all major subsystems are created
 	virtual bool init(int args,char * arg[]);
 
+	void createWindow(const string& windowTitle,
+		const unsigned int width, const unsigned int height,
+		const unsigned int windowFlags = 0);
+
+	void OnQuit();
+
 	//Basically runs our game
 	void run();
 protected:
 	ProgramOptions m_Options;
+	SDL_Window* m_pWindow;
 
+	bool m_bIsRunning;
 	unsigned int m_WindowWidth;
 	unsigned int m_WindowHeight;
 	unsigned int m_WindowCreationFlags;
