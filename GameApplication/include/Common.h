@@ -16,9 +16,12 @@
 #include <ctime>
 #include <cstdarg>
 
+
 //Name space std, so we don't need to do std::vector
 using namespace std;
 
 #include "../Utils/include/Utils.h"
+
+#include <SDL.h>
 
 #endif
