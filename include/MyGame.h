@@ -13,12 +13,16 @@ public:
 	void update();
 	void initScene();
 	void destroyScene();
+
+	
 private:
 	GLuint m_VBO;
 	GLuint m_VAO;
 
 	//Shader Program
 	GLuint m_ShaderProgram;
+
+	vec3 m_CameraPos;
 
 	//matrices
 	mat4 m_ViewMatrix;
@@ -29,5 +33,6 @@ private:
 	GLuint m_ClampSampler;
 
 	GameObject * m_TestObject;
+	GameObject* m_ModelObject;
 };
 #endif

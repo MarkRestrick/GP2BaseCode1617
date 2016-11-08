@@ -19,7 +19,11 @@ public:
 
 	void loadTexture(const string& filename);
 	void loadShaders(const string& vsFilename, const string& fsFilename);
-	void copyVertexData(Vertex *pVerts, int numberOfVertcies, int numberofIndices, unsigned int *indices);
+	void copyVertexData(Vertex *pVerts, int numberOfVertcies, int *indices, int numberofIndices);
+	void setCameraPosition(vec3 &CameraPos)
+	{
+		m_CameraPos = CameraPos;
+	};
 
 private:
 	GLuint m_VBO;
@@ -45,6 +49,8 @@ private:
 
 	int m_NumberOfVertices;
 	int m_NumberOfIndices;
+
+	vec3 m_CameraPos;
 protected:
 };
 
